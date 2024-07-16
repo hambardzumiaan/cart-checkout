@@ -1,0 +1,19 @@
+type Product {
+  id: ID!
+  name: String!
+  price: Float!
+}
+
+type CartItem {
+  id: ID!
+  product: Product!
+  quantity: Int!
+}
+
+type Query {
+  cartItems: [CartItem!]!
+}
+
+type Mutation {
+  checkout: Boolean!
+}
